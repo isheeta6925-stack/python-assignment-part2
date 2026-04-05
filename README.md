@@ -1,136 +1,89 @@
 Bitsom_ba_2511354_Srivastava_Isheeta_Python-Assignment-Part2-OUTPUT
 
 PS C:\Users\Isheeta> & C:/Users/Isheeta/AppData/Local/Python/pythoncore-3.14-64/python.exe c:/assignment/python-assignment-part2/python-assignment-part2/part2_order_system.py
-============================================================
-TASK 1 - Full Menu by Category
-============================================================
+Menu list
 
-===== Starters =====
-  Paneer Tikka       Rs.180.00   [Available]
-  Chicken Wings      Rs.220.00   [Unavailable]
-  Veg Soup           Rs.120.00   [Available]
+ Starters
+Paneer Tikka - Rs. 180.0 - yes
+Chicken Wings - Rs. 220.0 - no
+Veg Soup - Rs. 120.0 - yes
 
-===== Mains =====
-  Butter Chicken     Rs.320.00   [Available]
-  Dal Tadka          Rs.180.00   [Available]
-  Veg Biryani        Rs.250.00   [Available]
-  Garlic Naan        Rs.40.00   [Available]
+ Mains
+Butter Chicken - Rs. 320.0 - yes
+Dal Tadka - Rs. 180.0 - yes
+Veg Biryani - Rs. 250.0 - yes
+Garlic Naan - Rs. 40.0 - yes
 
-===== Desserts =====
-  Gulab Jamun        Rs.90.00   [Available]
-  Rasgulla           Rs.80.00   [Available]
-  Ice Cream          Rs.110.00   [Unavailable]
+ Desserts
+Gulab Jamun - Rs. 90.0 - yes
+Rasgulla - Rs. 80.0 - yes
+Ice Cream - Rs. 110.0 - no
 
-Total items on menu   : 10
-Total available items : 8
-Most expensive item   : Butter Chicken (Rs.320.00)
+Total items: 10
+Available: 8
+Costliest: Butter Chicken 320.0
 
-Items priced under Rs.150:
-  Veg Soup --- Rs.120.00
-  Garlic Naan --- Rs.40.00
-  Gulab Jamun --- Rs.90.00
-  Rasgulla --- Rs.80.00
-  Ice Cream --- Rs.110.00
+Under 150:
+Veg Soup 120.0
+Garlic Naan 40.0
+Gulab Jamun 90.0
+Rasgulla 80.0
+Ice Cream 110.0
 
-============================================================
-TASK 2 - Cart Operations
-============================================================
+cart demo
+added Paneer Tikka
+Paneer Tikka x 2 @ 180.0
+added Gulab Jamun
+Paneer Tikka x 2 @ 180.0
+Gulab Jamun x 1 @ 90.0
+updated Paneer Tikka
+Paneer Tikka x 3 @ 180.0
+Gulab Jamun x 1 @ 90.0
+not in menu
+not available
+removed Gulab Jamun
+Paneer Tikka x 3 @ 180.0
 
---- Adding Paneer Tikka x2 ---
-  Added 'Paneer Tikka' x2 to cart.
-    Paneer Tikka x2 @ Rs.180.00
+Bill
+Paneer Tikka = 540.0
+Subtotal: 540.0
+GST: 27.0
+Total: 567.0
 
---- Adding Gulab Jamun x1 ---
-  Added 'Gulab Jamun' x1 to cart.
-    Paneer Tikka x2 @ Rs.180.00
-    Gulab Jamun x1 @ Rs.90.00
+Inventory check
+changed stock: 999
+backup stock: 10
+used Paneer Tikka
 
---- Adding Paneer Tikka x1 (quantity should update to 3) ---
-  Updated 'Paneer Tikka' quantity to 3.
-    Paneer Tikka x3 @ Rs.180.00
-    Gulab Jamun x1 @ Rs.90.00
+reorder check
 
---- Trying to add Mystery Burger (does not exist) ---
-  'Mystery Burger' does not exist in the menu.
-    Paneer Tikka x3 @ Rs.180.00
-    Gulab Jamun x1 @ Rs.90.00
+Sales info
+2025-01-01 : 790.0
+2025-01-02 : 560.0
+2025-01-03 : 960.0
+2025-01-04 : 570.0
+best day: 2025-01-03
+top item: Garlic Naan
 
---- Trying to add Chicken Wings (unavailable) ---
-  'Chicken Wings' is currently unavailable.
-    Paneer Tikka x3 @ Rs.180.00
-    Gulab Jamun x1 @ Rs.90.00
+after adding new day
+2025-01-01 : 790.0
+2025-01-02 : 560.0
+2025-01-03 : 960.0
+2025-01-04 : 570.0
+2025-01-05 : 750.0
+best day: 2025-01-03
 
---- Removing Gulab Jamun ---
-  Removed 'Gulab Jamun' from cart.
-    Paneer Tikka x3 @ Rs.180.00
-
-========== Order Summary ==========
-  Paneer Tikka         x3   Rs.540.00
-------------------------------------
-  Subtotal:                Rs.540.00
-  GST (5%):                Rs.27.00
-  Total Payable:           Rs.567.00
-====================================
-
-============================================================
-TASK 3 - Inventory Tracker with Deep Copy
-============================================================
-
-Changing Paneer Tikka stock to 999 in inventory to show deep copy works:
-  inventory stock        = 999
-  inventory_backup stock = 10
-  Backup is unaffected - deep copy confirmed!
-
-Inventory restored to original.
-
-Fulfilling order from inventory:
-  Deducted 3 of 'Paneer Tikka'. Remaining stock: 7
-
---- Reorder Alerts ---
-
-Current inventory vs backup (Paneer Tikka):
-  inventory stock        : 7
-  inventory_backup stock : 10
-  They differ - deep copy protected the original.
-
-============================================================
-TASK 4 - Daily Sales Log Analysis
-============================================================
-
-Date            |    Revenue
-------------------------------
-  2025-01-01    | Rs.  790.00
-  2025-01-02    | Rs.  560.00
-  2025-01-03    | Rs.  960.00
-  2025-01-04    | Rs.  570.00
-
-  Best-selling day: 2025-01-03 (Rs.960.00)
-
-Most ordered item: Garlic Naan (appeared in 5 orders)
-
---- Updated Revenue Table (after adding 2025-01-05) ---
-
-Date            |    Revenue
-------------------------------
-  2025-01-01    | Rs.  790.00
-  2025-01-02    | Rs.  560.00
-  2025-01-03    | Rs.  960.00
-  2025-01-04    | Rs.  570.00
-  2025-01-05    | Rs.  750.00
-
-  Best-selling day: 2025-01-03 (Rs.960.00)
-
---- All Orders (Numbered) ---
-  1. [2025-01-01] Order #1  --- Rs.220.00 --- Items: Paneer Tikka, Garlic Naan
-  2. [2025-01-01] Order #2  --- Rs.210.00 --- Items: Gulab Jamun, Veg Soup
-  3. [2025-01-01] Order #3  --- Rs.360.00 --- Items: Butter Chicken, Garlic Naan
-  4. [2025-01-02] Order #4  --- Rs.220.00 --- Items: Dal Tadka, Garlic Naan
-  5. [2025-01-02] Order #5  --- Rs.340.00 --- Items: Veg Biryani, Gulab Jamun
-  6. [2025-01-03] Order #6  --- Rs.260.00 --- Items: Paneer Tikka, Rasgulla
-  7. [2025-01-03] Order #7  --- Rs.570.00 --- Items: Butter Chicken, Veg Biryani
-  8. [2025-01-03] Order #8  --- Rs.130.00 --- Items: Garlic Naan, Gulab Jamun
-  9. [2025-01-04] Order #9  --- Rs.300.00 --- Items: Dal Tadka, Garlic Naan, Rasgulla
-  10. [2025-01-04] Order #10  --- Rs.270.00 --- Items: Paneer Tikka, Gulab Jamun
-  11. [2025-01-05] Order #11  --- Rs.490.00 --- Items: Butter Chicken, Gulab Jamun, Garlic Naan
-  12. [2025-01-05] Order #12  --- Rs.260.00 --- Items: Paneer Tikka, Rasgulla
+all orders
+1 2025-01-01 1 220.0 ['Paneer Tikka', 'Garlic Naan']
+2 2025-01-01 2 210.0 ['Gulab Jamun', 'Veg Soup']
+3 2025-01-01 3 360.0 ['Butter Chicken', 'Garlic Naan']
+4 2025-01-02 4 220.0 ['Dal Tadka', 'Garlic Naan']
+5 2025-01-02 5 340.0 ['Veg Biryani', 'Gulab Jamun']
+6 2025-01-03 6 260.0 ['Paneer Tikka', 'Rasgulla']
+7 2025-01-03 7 570.0 ['Butter Chicken', 'Veg Biryani']
+8 2025-01-03 8 130.0 ['Garlic Naan', 'Gulab Jamun']
+9 2025-01-04 9 300.0 ['Dal Tadka', 'Garlic Naan', 'Rasgulla']
+10 2025-01-04 10 270.0 ['Paneer Tikka', 'Gulab Jamun']
+11 2025-01-05 11 490.0 ['Butter Chicken', 'Gulab Jamun', 'Garlic Naan']
+12 2025-01-05 12 260.0 ['Paneer Tikka', 'Rasgulla']
 PS C:\Users\Isheeta> 
